@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 
 import inquirer
+import os
 from pprint import pprint
 
 questions = [
     inquirer.Text(
-        "commit",
+        'commit',
         message = "Please input a comment for your commit"
     ),
 ]
 
 answers = inquirer.prompt(questions)
 
-pprint(answers)
+os.system("git commit -m \"" + answers['commit'] + "\"")
