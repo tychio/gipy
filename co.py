@@ -13,4 +13,8 @@ questions = [
 
 answers = inquirer.prompt(questions)
 
-os.system("git commit -m \"" + answers['commit'] + "\"")
+commitComment = answers['commit']
+if commitComment:
+    os.system("git commit -m \"" + commitComment + "\"")
+else:
+    os.system("git commit -amend")
