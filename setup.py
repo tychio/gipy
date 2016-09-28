@@ -12,6 +12,7 @@ setup(
     description="A tool for git",
     license="MIT",
     author="Tychio",
+    author_email = 'code@tychio.net',
     packages=find_packages(),
     install_requires=[],
     long_description=long_description,
